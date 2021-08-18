@@ -9,7 +9,9 @@ const initializeKeys = () => {
 };
 export const grabTheTransitionedKeys = () => {
   const keys = document.querySelectorAll('.key');
-  keys.forEach((key) => key.addEventListener('transitionend', stopAnimation));
+  keys.forEach((key) => {
+    key.addEventListener('transitionend', stopAnimation);
+  });
 };
 
 window.addEventListener('load', initializeKeys);

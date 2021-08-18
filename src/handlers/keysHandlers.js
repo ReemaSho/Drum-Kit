@@ -5,7 +5,7 @@ export const playSound = (e) => {
   const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
   if (!audio) return;
 
-  key.classList.add('playing');
+  key.classList.toggle('playing');
   audio.currentTime = 0;
   audio.play();
 };
